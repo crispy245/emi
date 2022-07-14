@@ -232,40 +232,7 @@ nav{
 
 @media (max-width:780px){
     
-    .contact--link{
-        margin: 0 auto;
-        font-size: 1em;
-    }
-    .contact-btn{
-        padding: 0.3em;
-    }
-
-    .nav-toggle-label{
-        display: flex;
-        justify-content: left;
-    }
-    nav{
-        transform: scale(1,0);
-        max-height: 3em;
-    }
-    .nav-toggle:checked ~ nav{
-        transform: scale(1,1);
-    }
-
-    .nav_list{
-        padding-right: 0;
-        padding-left: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        display: flex;
-        justify-content: space-between;
-        list-style-type: none;
-        margin:  0;
-        font-weight: var(--fw-normal);
-        font-size: 1.5rem;
-        transform: scale(1,0);
-        height: auto;
-    }
+    
 
     
 }

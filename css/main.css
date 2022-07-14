@@ -1,0 +1,274 @@
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary: #023859;
+    --clr-hard : #af102d;
+    --clr-light: #efeeee;
+    --clr-top: #001c2d;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-black: 900;
+    --grid: 1fr;
+}
+
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--clr-light);
+    width: auto;
+    height: auto;
+    
+}
+
+header{
+    background-color: var(--clr-primary);
+    text-align: center;
+}
+
+.headup{
+    background-color: var(--clr-light) ;
+    overflow: hidden;
+    
+}
+.logo{
+    height: 6em;
+    width: 9em;
+    float: left;
+    position: relative;
+    padding-right: 0.2em;
+}
+
+.ndhu-logo{
+    height: 6em;
+    float: left;
+    position: relative;
+}
+
+.contact-btn{
+    float:  right;
+    padding-right: 2em;
+}
+
+.contact--link{
+    font-size: 1.6em;
+    font-weight: var(--fw-bold);
+    text-decoration:none;
+    color: var(--clr-primary);
+}
+
+
+.nav_list{
+    padding-right: 7em;
+    padding-left: 7em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin:  0;
+    font-weight: var(--fw-normal);
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: var(--clr-light);
+}
+
+.image-top {
+    width: auto;
+    position: relative;
+    text-align: center;
+    color: white;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+    -ms-interpolation-mode: nearest-neighbor; 
+
+}
+
+.image-top--image{
+    animation: fadeIn 5s;
+
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+.centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    text-align: left;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-family: 'Allerta', sans-serif;
+}
+
+.intro-plan{
+    text-align: center;
+    border: 4px var(--clr-primary) solid;
+    background-color: var(--clr-primary);
+    width: 50vw;
+    height: 3em;
+    transform: translate(50%, -50%);
+}
+
+.intro-plan--text{
+    color: var(--clr-light);
+    margin: 0;
+    display: inline-block;
+}
+
+.about{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3em;
+    
+}
+
+.about-intro{
+    margin: 0 auto;
+    display: flex;
+    text-align: justify;
+    width: 50vw;
+    font-size: 1.5rem;
+}
+
+.emi_awards{
+    margin: 0 auto;
+    display: flex;
+    width: 50%;
+
+}
+
+
+.bottom-part{
+    background-color: var(--clr-primary);
+    justify-items: center;
+}
+
+.footer-content{
+    display: flex;
+    color: var(--clr-light);
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+.footer-content-right-links{
+    text-decoration: none;
+    text-align: left;
+}
+
+.footer-content{
+    text-align: center;
+    
+}
+
+.footer-content-right a{
+    display: block;
+    text-decoration: none;
+    color: var(--clr-light);
+    margin: 0.5em;
+}
+
+.footer-content-center{
+    flex-grow: 2;
+}  
+
+nav{
+    max-height: 10em;
+    background-color: var(--clr-primary);
+}
+
+.nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    display: none;
+}
+
+
+
+
+
+@media (max-width:1000px) {
+
+    .footer-content div{
+      display: block;
+    }
+
+    .image-top--image{
+        width: auto;
+        position: relative;
+        height: 14em;
+    }
+
+    .intro-plan--text{
+        font-size: 1.5rem;
+    }
+    .about-intro{
+        font-size: 1em;
+    }
+
+    .centered{
+        font-size: 1rem;
+        text-align: left;
+        padding-top: 4em;
+        font-weight: var(--fw-bold);
+    }
+
+}
+
+@media (max-width:780px){
+    
+    .contact--link{
+        margin: 0 auto;
+        font-size: 1em;
+    }
+    .contact-btn{
+        padding: 0.3em;
+    }
+
+    .nav-toggle-label{
+        display: flex;
+        justify-content: left;
+    }
+    nav{
+        transform: scale(1,0);
+        max-height: 3em;
+    }
+    .nav-toggle:checked ~ nav{
+        transform: scale(1,1);
+    }
+
+    .nav_list{
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin:  0;
+        font-weight: var(--fw-normal);
+        font-size: 1.5rem;
+        transform: scale(1,0);
+        height: auto;
+    }
+
+    
+}
+
+
+
